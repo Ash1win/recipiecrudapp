@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receipe App</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Receipe App</h1>
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="search for reciepes ..."
+        onkeyup="handlesearch()"
+      />
+    </div>
+    <div id="listId" class="list-container"></div>
+    <button class="btn-add" onclick="toggleaddreciepeform()"></button>
+    <div id="reciepeform" class="hide">
+      <div class="formaddReciepe">
+        <div>
+          <button class="close-btn" onclick="toggleaddreciepeform()">
+            <span class="material-icons"> close </span>
+          </button>
+        </div>
+        <h1>Add Reciepe</h1>
+        <input type="text" id="rname" placeholder="reciepe name" />
+        <input type="text" id="rimage" placeholder="image url" />
+        <input type="text" id="ringredients" placeholder="ingredients" />
+        <input type="text" id="rprocedure" placeholder="procedure" />
+        <button id="addReciepeBtn" onclick="addreciepe()">Add Reciepe</button>
+      </div>
+    </div>
+    <div id="updatereciepeform" class="hide">
+      <div class="formaddReciepe">
+        <div>
+          <button class="close-btn" onclick="toggleupdatereciepeform()">
+            <span class="material-icons"> close </span>
+          </button>
+        </div>
+        <h1>Update Reciepe</h1>
+        <input type="text" id="urname" name="name" placeholder="reciepe name" />
+        <input type="text" id="urimage" name="image" placeholder="image url" />
+        <input
+          type="text"
+          id="uringredients"
+          name="ingredients"
+          placeholder="ingredients"
+        />
+        <input
+          type="text"
+          id="urprocedure"
+          name="procedure"
+          placeholder="procedure"
+        />
+      </div>
+    </div>
+    <div id="showreciepeview" class="hide"></div>
+  <script src="bundle.js"></script></body>
+</html>

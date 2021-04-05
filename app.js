@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
 
-const conn = mongoose.connect('mongodb://localhost/reciepeapp', {
+const conn = mongoose.connect('mongodb+srv://user:user@cluster0.lf2br.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
